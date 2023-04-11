@@ -21,11 +21,11 @@ const users = [
 ];
 
 const filterDogOwners = array => {
-  let result = array.filter(user => {
-    return user.hasDog === true
-  })
-  return result
+  return array.filter(user => user.hasDog === true)
 }
+console.log(filterDogOwners(users))
+
+
 
 const filterAdults = array => {
   return array.filter(person => person.age >= 18)
