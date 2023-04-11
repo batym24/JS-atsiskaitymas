@@ -14,7 +14,6 @@ const ENDPOINT = 'cars.json';
 fetch(ENDPOINT)
 .then(res => res.json())
 .then(data => {
-    // console.log(data)
     data.forEach(brand => {
         const brandDiv = document.createElement('div')
         brandDiv.classList.add('brand')
@@ -27,11 +26,8 @@ fetch(ENDPOINT)
             const carModel = document.createElement('li')
             carModel.appendChild(document.createTextNode(car))
             modelList.appendChild(carModel)
-
         })
-
         brandDiv.append(brandHeader, modelList)
-
         document.querySelector('#output').appendChild(brandDiv)
     })
 })
