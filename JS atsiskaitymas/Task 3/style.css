@@ -53,9 +53,34 @@
 }
 
 .output-cointainer #output {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   width: 80%;
   margin-top: 25px;
   padding: 30px;
   border-radius: 5px;
   background-color: #fff;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  width: 250px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: #0d1117;
+}
+
+.user h1 {
+  color: aliceblue;
+}
+
+.user img {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
 }
