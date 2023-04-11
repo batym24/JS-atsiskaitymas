@@ -8,3 +8,19 @@ pamatyti jo pateikto svorio konvertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+const output = document.querySelector('#output')
+
+document.querySelector('.wrapper>form').addEventListener('submit', e => {
+    e.preventDefault()
+    let kilogramgs = e.target.elements.search.value
+    output.innerHTML = ""
+    const weigthInPunds = document.createElement('h1')
+    weigthInPunds.appendChild(document.createTextNode(`Weight in pounds: ${(parseFloat(kilogramgs) * 2.2046).toFixed(2)} lbs`))
+    const weightInGrams = document.createElement('h1')
+    weightInGrams.appendChild(document.createTextNode(`Weight in grams: ${(parseFloat(kilogramgs) / 0.0010000).toFixed(2)} g`))
+    const weightInOunces = document.createElement('h1')
+    weightInOunces.appendChild(document.createTextNode(`Weight in ounces: ${(parseFloat(kilogramgs) * 35.274).toFixed(2)} oz`))
+
+    output.append(weigthInPunds, weightInGrams, weightInOunces)
+    document.querySelector('.wrapper>form').reset()
+})
