@@ -17,9 +17,7 @@ document.querySelector('#btn').addEventListener('click', () => {
     fetch(ENDPOINT)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
         data.forEach(user => {
-            
             const userDiv = document.createElement('div')
             userDiv.classList.add('user')
             
@@ -32,7 +30,6 @@ document.querySelector('#btn').addEventListener('click', () => {
             userDiv.append(login, avatar)
 
             document.querySelector('#output').appendChild(userDiv)
-
         })
     })
 })
